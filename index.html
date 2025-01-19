@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinly</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes animation{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+    .animate{
+        animation: animation 1s ease;
+    }
+    .anim{
+        animation: animation ease;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+    }
+  </style>
+  <body class="bg-[#0F002B]">
+    <nav
+      class="animate flex justify-between h-24 items-center w-[90%] mx-auto text-white py-3"
+    >
+      <div class="flex items-center gap-10">
+        <img class="w-14" src="images/logo.png" alt="" />
+        <div class="sm:flex hidden justify-between gap-10">
+          <a class="font-semibold" href="">Home</a>
+          <a class="font-semibold" href="">Features</a>
+          <a class="font-semibold" href="">Market</a>
+          <a class="font-semibold" href="">About Us</a>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="px-5 py-2 bg-transparent border bottom-2 rounded-full border-whiteuppercase sm:block hidden"
+        >
+          En
+        </button>
+        <i class="ri-menu-3-line sm:hidden text-2xl font-semibold"></i>
+      </div>
+    </nav>
+    <div
+      class=" main w-[90%] mx-auto flex gap-8 sm:gap-0 flex-col sm:flex-row py-14"
+    >
+      <div class="animate flex-1 flex flex-col justify-center px-2">
+        <h1 class="text-4xl font-semibold text-white uppercase sm:text-6xl">
+          Stay Ahead of the <span class="text-orange-400">Market</span>
+        </h1>
+        <p class="font-semibold text-white sm:w-[70%] py-5">
+          Get real-time insights, price alerts, and expert market analysis to
+          make informed decisions.
+        </p>
+        <a href="#explore"
+          ><button
+            class="bg-orange-500 w-fit text-white px-8 py-2 rounded-full font-semibold"
+          >
+            Explore
+          </button></a
+        >
+      </div>
+      <div class="flex-1 animate">
+        <img class="" src="images/background2.png" alt="" />
+      </div>
+    </div>
+
+    <div class="anim sm:w-[90%] mx-auto pb-10" id="explore">
+      <h1 class="text-2xl sm:text-3xl text-white font-bold py-3 text-center">
+        Market Prices of Top Cryptocurrencies
+      </h1>
+      <div
+        class="flex gap-10 flex-col sm:flex-row items-center mt-5 justify-center flex-wrap"
+      >
+        <div
+          class="anim flex items-center justify-center text-white gap-4 border border-white rounded-md p-4 min-w-56"
+        >
+          <img class="w-16" src="images/bitcoin.png" alt="" />
+          <div class="flex flex-col gap-1 font-semibold">
+            <p class="text-xl"><span id="bitcoin"></span></p>
+            <p class="text-orange-500 text-xl">Bitcoin</p>
+          </div>
+        </div>
+        <div
+          class="anim flex items-center justify-center text-white gap-4 border border-white rounded-md p-4 min-w-56"
+        >
+          <img class="w-16" src="images/ethereum.png" alt="" />
+          <div class="flex flex-col gap-1 font-semibold">
+            <p class="text-xl"><span id="ethereum"></span></p>
+            <p class="text-orange-500 text-xl">Ethereum</p>
+          </div>
+        </div>
+
+        <div
+          class=" anim flex items-center justify-center text-white gap-4 border border-white rounded-md p-4 min-w-56"
+        >
+          <img class="w-16" src="images/binance.png" alt="" />
+          <div class="flex flex-col gap-1 font-semibold">
+            <p class="text-xl"><span id="binance"></span></p>
+            <p class="text-orange-500 text-xl">Binance</p>
+          </div>
+        </div>
+        <div
+          class="anim flex items-center justify-center text-white gap-4 border border-white rounded-md p-4 px-6 min-w-56"
+        >
+          <img class="w-16" src="images/xrp.png" alt="" />
+          <div class="flex flex-col gap-1 font-semibold">
+            <p class="text-xl"><span id="xrp"></span></p>
+            <p class="text-orange-500 text-xl">XRP</p>
+          </div>
+        </div>
+        <div
+          class="anim flex items-center justify-center text-white gap-4 border border-white rounded-md p-4 min-w-56"
+        >
+          <img class="w-16" src="images/dogecoin.png" alt="" />
+          <div class="flex flex-col gap-1 font-semibold">
+            <p class="text-xl"><span id="dogecoin"></span></p>
+            <p class="text-orange-500 text-xl">Dogecoin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
